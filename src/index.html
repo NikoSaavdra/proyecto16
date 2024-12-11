@@ -1,38 +1,75 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi aplicación</title>
-    
-    <link rel="stylesheet"  href="./css/mistyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">    
-    <script src="../node_modules/jquery/dist/jquery.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/mistyle.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-
 <body>
-    
-    <div class="row">     
-    <div class="col-sm" id="resListar"></div>
-    <button id="boton1">Listar</button><br>
+<div class="container" id="listado">
+  <h2>Maestro</h2>
 
-    <div class="col-sm" id="resLeer"></div>
-    <button id="boton2">Leer</button><br>
-    
-    <div class="col-sm" id="resCrear"></div>
-    <button id="boton3"> Crear</button><br>
+  <div id="loadingMessage" style="display: none; text-align: center;">
+    <h3>Cargando...</h3>
+  </div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th>NOMBRE</th>
+        <th>APELLIDO</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Fernando</td>
+        <td>Alguno</td>
+        <td><button type="button" class="btn btn-default">Borrar</button></td>
+      </tr>
+      <tr>
+        <td>Nico</td>
+        <td>Otro</td>
+        <td><button type="button" class="btn btn-default">Borrar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" id="refrescarBtn" class="btn btn-primary">Refrescar</button>
+</div>
+
+<div class="container"> 
+  <div class="row"> 
+    <div class="col-sm-5"></div>
+    <button id="nuevoBtn" class="btn btn-default btn-lg">Nuevo</button>
+  </div>
+</div>
+  
+<div id="formContainer" style="display: none;">
+  <h2>Detalle</h2>
+  <form id="detalleForm" class="form">
+    <input type="hidden" id="id" />
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" />
+    <br />
+    <label for="apellido">Apellido:</label>
+    <input type="text" id="apellido" />
+    <br />
+    <br />
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-2">
+          <button type="button" id="enviar" class="btn btn-primary" disabled>Guardar</button>
+        </div>
+        <div class="col-xs-2">
+          <button type="button" id="cancelar" class="btn btn-default btn-lg">Cancelar</button>
+        </div>
+      </div>
     </div>
-    
-    <div id="resActualizar"></div>
-    <button id="boton4">Actualizar</button><br>
+  </form>
+</div>
 
-    <div id="resBorrar"></div>
-    <button id="boton5">Borrar</button><br>
-    <br>
-
-
-    <script src="/src/javascript/index.js"></script>
+<script src="/src/javascript/index.js"></script>
 </body>
-
 </html>

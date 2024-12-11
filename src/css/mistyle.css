@@ -1,7 +1,66 @@
-button{
-    font-size: xx-large;
+#listado-container {
+    margin-bottom: 20px;
+  }
+  
+ #formContainer {
+  display: none; 
+  position: fixed; 
+  top: 70%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  background-color: white; 
+  padding: 20px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  border-radius: 8px; 
+  width: 50%; 
+  
 }
 
-.mio{
-    background-color: brown;
-}
+  .form{
+    display: block;
+    justify-content: center;
+    align-items: center;
+    width: 800px;  
+  }
+  
+  form input,
+  form button {
+    margin-bottom: 10px;
+  }
+  
+  #formContainer button {
+    width: 100px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+.row .col {
+    padding: 5px;
+  }
+
+  #detalleForm input[type="text"], #detalleForm input[type="hidden"] {
+    font-size: 18px; 
+    padding: 10px;   
+    width: 100%;     
+    height: 40px;    
+    margin-bottom: 15px; 
+  }
+  
+  #detalleForm textarea {
+    font-size: 18px; 
+    padding: 10px;   
+    width: 100%;     
+    height: 100px;   
+    margin-bottom: 15px; 
+  }
+  
+  #loadingMessage {
+    font-size: 20px;
+    color: #555;
+    margin: 20px 0;
+    font-weight: bold;
+  }
+  
+  
+    
+  
